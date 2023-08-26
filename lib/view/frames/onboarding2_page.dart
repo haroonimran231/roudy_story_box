@@ -9,7 +9,7 @@ class onBoarding2Page extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: powderPink,
+      backgroundColor: AppColors.powderPink,
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,

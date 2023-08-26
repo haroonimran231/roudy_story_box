@@ -1,5 +1,6 @@
+import 'package:get/get.dart';
 import 'package:roudy_story_box/common/color/color.dart';
-import 'package:roudy_story_box/view/frames/onboarding1_page.dart';
+import 'package:roudy_story_box/view/frames/login_page.dart';
 import 'package:flutter/material.dart';
 
 class WelcomePage extends StatelessWidget {
@@ -30,7 +31,7 @@ class WelcomePage extends StatelessWidget {
                 width: 390,
                 // color: Colors.transparent,
                 decoration: const BoxDecoration(
-                  color: linearpowderpink,
+                  color: AppColors.linearpowderpink,
                   borderRadius: BorderRadius.only(
                     topLeft: Radius.circular(20),
                     topRight: Radius.circular(20),
@@ -42,9 +43,11 @@ class WelcomePage extends StatelessWidget {
                     SizedBox(
                       // height: 99,
                       child: Text(
-                        "Welcome!",
+                        "              Welcome! \n Lets hear a story from you ",
                         style: TextStyle(
-                            fontWeight: FontWeight.bold, fontSize: 25),
+                            fontWeight: FontWeight.bold,
+                            fontSize: 25,
+                            color: Colors.white),
                       ),
                     ),
                     SizedBox(
@@ -52,22 +55,24 @@ class WelcomePage extends StatelessWidget {
                     ),
                     FilledButton.icon(
                       onPressed: () {
+                        Get.to(LoginPage());
+
                         // Add your button's onPressed logic here
                       },
                       label: Text(
                         'Get Started',
-                        style: TextStyle(color: purple),
+                        style: TextStyle(color: AppColors.purple),
                       ),
                       icon: Icon(
                         Icons.arrow_forward,
-                        color: purple,
+                        color: AppColors.purple,
                       ),
                       style: ButtonStyle(
                         minimumSize: MaterialStateProperty.resolveWith(
                           (states) => Size(310, 44),
                         ),
                         backgroundColor: MaterialStateProperty.all<Color>(
-                            softblue), // Set the desired background color
+                            AppColors.softblue), // Set the desired background color
                       ),
                     ),
                   ],
