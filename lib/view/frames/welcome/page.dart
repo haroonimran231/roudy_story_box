@@ -1,7 +1,4 @@
-import 'package:get/get.dart';
-import 'package:roudy_story_box/common/color/color.dart';
-import 'package:roudy_story_box/view/frames/login_page.dart';
-import 'package:flutter/material.dart';
+import 'index.dart';
 
 class WelcomePage extends StatelessWidget {
   // static var routeName;
@@ -43,7 +40,8 @@ class WelcomePage extends StatelessWidget {
                     SizedBox(
                       // height: 99,
                       child: Text(
-                        "              Welcome! \n Lets hear a story from you ",
+                        "              Welcome! \n Lets hear a story from you"
+                            .tr,
                         style: TextStyle(
                             fontWeight: FontWeight.bold,
                             fontSize: 25,
@@ -55,12 +53,12 @@ class WelcomePage extends StatelessWidget {
                     ),
                     FilledButton.icon(
                       onPressed: () {
-                        Get.to(LoginPage());
+                        Get.toNamed(AppRoutes.login);
 
                         // Add your button's onPressed logic here
                       },
                       label: Text(
-                        'Get Started',
+                        'Get Started'.tr,
                         style: TextStyle(color: AppColors.purple),
                       ),
                       icon: Icon(
@@ -72,7 +70,8 @@ class WelcomePage extends StatelessWidget {
                           (states) => Size(310, 44),
                         ),
                         backgroundColor: MaterialStateProperty.all<Color>(
-                            AppColors.softblue), // Set the desired background color
+                            AppColors
+                                .softblue), // Set the desired background color
                       ),
                     ),
                   ],
