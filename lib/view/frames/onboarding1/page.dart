@@ -3,14 +3,35 @@ import 'package:roudy_story_box/common/routes/routes.dart';
 import 'index.dart';
 // import 'package:get/get.dart';
 
-class onBoarding1Page extends StatelessWidget {
+class OnBoarding1Page extends StatelessWidget {
   final List locale = [
-    {"name": "English", "locale": Locale("en", "US")},
-    {"name": "اردو", "locale": Locale("ur", "PK")},
-    {"name": "हिंदी", "locale": Locale("hi", "IN")},
+    {
+      "name": "English(English)                       🇺🇸",
+      "locale": Locale("en", "US")
+    },
+    {
+      "name": "Urdu(اردو)                                  🇵🇰",
+      "locale": Locale("ur", "PK")
+    },
+    {
+      "name": "Hindi(हिंदी)                                 🇮🇳",
+      "locale": Locale("hi", "IN")
+    },
+    {
+      "name": "Chinese(中文)                           🇨🇳",
+      "locale": Locale("zn", "CN")
+    },
+    {
+      "name": "French(français)                       🇫🇷",
+      "locale": Locale("fr", "CH")
+    },
+    {
+      "name": "German(Deutsch)                     🇩🇪",
+      "locale": Locale("de", "CH")
+    },
   ];
 
-  onBoarding1Page({super.key});
+  OnBoarding1Page({super.key});
 
   updatelanguage(Locale locale) {
     Get.back();

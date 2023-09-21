@@ -1,5 +1,4 @@
-import 'package:flutter/material.dart';
-import 'package:roudy_story_box/view/frames/home/index.dart';
+import 'index.dart';
 
 class ReadingStory extends StatelessWidget {
   const ReadingStory({super.key});
@@ -10,7 +9,7 @@ class ReadingStory extends StatelessWidget {
       backgroundColor: AppColors.creamyYellow,
       appBar: AppBar(
         backgroundColor: AppColors.creamyYellow,
-        title: Text("Read Story"),
+        title: Text("Read Story".tr),
       ),
       body: Center(
         child: Column(
@@ -29,8 +28,10 @@ class ReadingStory extends StatelessWidget {
                 child: Column(
                   children: [
                     FilledButton(
-                      onPressed: () {},
-                      child: Text("Try Free Trial 7 Days"),
+                      onPressed: () {
+                        Get.toNamed(AppRoutes.storydisplaypage);
+                      },
+                      child: Text("Try Free Trial 7 Days".tr),
                     )
                   ],
                 ),

@@ -14,4 +14,5 @@ class RouteNames {
   static const String feedback = '/feedback';
   static const String readingstory = '/readingstory';
   static const String goodbye = '/goodbye';
+  static const String storydisplaypage = '/storydisplaypage';
 }

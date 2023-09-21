@@ -41,7 +41,7 @@ class SignupPage extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
                         Text(
-                          "Sign Up".tr,
+                          'Sign Up'.tr,
                           style: TextStyle(fontSize: 20),
                         ),
                         TextFormField(

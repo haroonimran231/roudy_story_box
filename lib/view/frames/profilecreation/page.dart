@@ -33,7 +33,7 @@ class ProfileCreation extends StatelessWidget {
                 children: [
                   SizedBox(height: 50), // Adjust as needed
                   Text(
-                    "Profile Creation",
+                    "Profile Creation".tr,
                     style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
                   ),
                   SizedBox(height: 20), // Adjust as needed
@@ -43,7 +43,7 @@ class ProfileCreation extends StatelessWidget {
                       "assets/images/profile.png",
                     ),
                   ),
-                  Text("Profile Picture")
+                  Text("Profile Picture".tr)
                 ],
               ),
             ),

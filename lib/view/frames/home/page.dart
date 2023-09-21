@@ -5,17 +5,27 @@ import 'package:roudy_story_box/common/color/color.dart';
 import 'package:roudy_story_box/common/routes/routes.dart';
 import 'package:roudy_story_box/view/frames/profilemanagement/page.dart';
 
+// ignore: must_be_immutable
 class HomePage extends StatelessWidget {
   final TextEditingController _searchController = TextEditingController();
+  // bool _iconBool = false;
 
+  // IconData _iconLight = Icons.wb_sunny;
+  // IconData _iconDark = Icons.nights_stay;
+
+  // // ignore: unused_field
+  // ThemeData _darkTheme = ThemeData(
+  //   primarySwatch: Colors.blue,
+  //   brightness: Brightness.light,
+  // );
   HomePage({super.key});
   Widget buildDrawer(BuildContext context) {
     return Drawer(
       backgroundColor: AppColors.lightLavender,
       child: ListView(
         children: [
-          const Text(
-            '      Dashboard',
+          Text(
+            '      Dashboard'.tr,
             style: TextStyle(
               color: Colors.black,
               fontSize: 14,
@@ -27,7 +37,7 @@ class HomePage extends StatelessWidget {
           ),
           ListTile(
             leading: const Icon(Icons.account_circle_rounded),
-            title: const Text('Profiles'),
+            title: Text('Profiles'.tr),
             onTap: () {
               Get.toNamed(AppRoutes.profilecreation);
               // Add onTap logic
@@ -35,7 +45,7 @@ class HomePage extends StatelessWidget {
           ),
           ListTile(
             leading: const Icon(Icons.settings),
-            title: const Text('Profile Management'),
+            title: Text('Profile Management'.tr),
             onTap: () {
               Get.to(() => ProfileManagement());
               // Add onTap logic
@@ -43,7 +53,7 @@ class HomePage extends StatelessWidget {
           ),
           ListTile(
             leading: const Icon(Icons.add_comment),
-            title: const Text('Chatboard'),
+            title: Text('Chatboard'.tr),
             onTap: () {
               Get.toNamed(AppRoutes.chatboard);
               // Add onTap logic
@@ -51,7 +61,7 @@ class HomePage extends StatelessWidget {
           ),
           ListTile(
             leading: const Icon(Icons.feedback),
-            title: const Text('Feedback'),
+            title: Text('Feedback'.tr),
             onTap: () {
               Get.toNamed(AppRoutes.feedback);
               // Add onTap logic
@@ -59,19 +69,20 @@ class HomePage extends StatelessWidget {
           ),
           ListTile(
             leading: const Icon(Icons.notifications),
-            title: const Text('Parental Control'),
+            title: Text('Parental Control'.tr),
             onTap: () {
               // Add onTap logic
             },
           ),
           ListTile(
             leading: const Icon(Icons.security_update_good_sharp),
-            title: const Text('Good bye'),
+            title: Text('Good bye'.tr),
             onTap: () {
               Get.toNamed(AppRoutes.goodbye);
               // Add onTap logic
             },
           ),
+
           // ListTile(
           //   leading: const Icon(Icons.notifications),
           //   title: const Text('theme changing'),
@@ -96,15 +107,15 @@ class HomePage extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: AppColors.powderPink,
         title: Container(
-          child: const Row(
+          child: Row(
             children: [
               Text(
-                'Hi',
+                'Hi'.tr,
                 style: TextStyle(fontSize: 14), // Small font size
               ),
               SizedBox(width: 2), // Add some space between the texts
               Text(
-                'John ',
+                'John '.tr,
                 style: TextStyle(fontSize: 32), // Large font size
               ),
             ],
@@ -119,8 +130,8 @@ class HomePage extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              const Text(
-                ' Hello!',
+              Text(
+                ' Hello!'.tr,
                 style: TextStyle(fontSize: 32, color: AppColors.purple),
               ),
               Image.asset(
@@ -130,8 +141,8 @@ class HomePage extends StatelessWidget {
               ),
             ],
           ),
-          const Text(
-            ' Find a story \n you would like \n to watch',
+          Text(
+            ' Find a story \n you would like \n to watch'.tr,
             style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
           ),
           const SizedBox(
@@ -145,7 +156,7 @@ class HomePage extends StatelessWidget {
                 controller: _searchController,
                 decoration: InputDecoration(
                   contentPadding: const EdgeInsets.all(8.0),
-                  labelText: '   Search for anything',
+                  labelText: '   Search for anything'.tr,
                   labelStyle: const TextStyle(color: Colors.black),
                   border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(20.0)),
@@ -164,12 +175,12 @@ class HomePage extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const Text(
-                  "  Recommended Stories",
+                Text(
+                  "  Recommended Stories".tr,
                   style: TextStyle(fontSize: 24),
                 ),
                 const SizedBox(
-                  height: 22,
+                  height: 26,
                 ),
                 Padding(
                   padding: const EdgeInsets.all(8.0),
@@ -180,13 +191,13 @@ class HomePage extends StatelessWidget {
                       child: Image.asset("assets/images/home2.png")),
                 ),
                 const SizedBox(
-                  height: 73.94,
+                  height: 79.94,
                 ),
                 Center(
                   child: ElevatedButton(
                     onPressed: () {},
-                    child: const Text(
-                      "Save",
+                    child: Text(
+                      "Save".tr,
                       style: TextStyle(fontSize: 32),
                     ),
                     style: ButtonStyle(

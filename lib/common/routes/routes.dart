@@ -1,6 +1,7 @@
 import 'package:roudy_story_box/view/frames/feedback/bindings.dart';
 import 'package:roudy_story_box/view/frames/feedback/page.dart';
 import 'package:roudy_story_box/view/frames/goodbye/page.dart';
+import 'package:roudy_story_box/view/frames/storydisplay/story_display.dart';
 import 'package:roudy_story_box/view/frames/readingstory/page.dart';
 
 import 'index.dart';
@@ -19,6 +20,7 @@ class AppRoutes {
   static const String chatboard = RouteNames.chatboard;
   static const String readingstory = RouteNames.readingstory;
   static const String goodbye = RouteNames.goodbye;
+  static const String storydisplaypage = RouteNames.storydisplaypage;
 
   static List<GetPage> pages = [
     GetPage(
@@ -27,7 +29,7 @@ class AppRoutes {
         binding: SplashBindings()),
     GetPage(
         name: onboarding1,
-        page: () => onBoarding1Page(),
+        page: () => OnBoarding1Page(),
         binding: Onboarding1Bindings()),
     GetPage(
         name: onboarding2,
@@ -66,6 +68,11 @@ class AppRoutes {
     GetPage(
       name: readingstory,
       page: () => ReadingStory(),
+      // binding: FeedbackBinding(),
+    ),
+    GetPage(
+      name: storydisplaypage,
+      page: () => StoryDisplayPage(),
       // binding: FeedbackBinding(),
     ),
     GetPage(

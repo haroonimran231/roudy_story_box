@@ -20,11 +20,11 @@ class ProfileManagement extends StatelessWidget {
         backgroundColor: AppColors.lightLavender,
         title: Center(
           child: Text(
-            'Profile Management',
-            style: TextStyle(fontSize: 14),
+            'Profile Management'.tr,
+            style: const TextStyle(fontSize: 14),
           ),
         ),
-        actions: [Icon(Icons.settings)],
+        actions: [const Icon(Icons.settings)],
       ),
       body: SingleChildScrollView(
         child: Padding(
@@ -33,14 +33,15 @@ class ProfileManagement extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                'Edit Profile',
-                style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+                'Edit Profile'.tr,
+                style:
+                    const TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
               ),
-              SizedBox(height: 16),
+              const SizedBox(height: 16),
               Center(
                 child: Stack(
                   children: [
-                    CircleAvatar(
+                    const CircleAvatar(
                       radius: 60,
                       backgroundImage: AssetImage('assets/images/profile.png'),
                     ),
@@ -48,7 +49,7 @@ class ProfileManagement extends StatelessWidget {
                       bottom: 0,
                       right: 0,
                       child: IconButton(
-                        icon: Icon(Icons.camera_alt),
+                        icon: const Icon(Icons.camera_alt),
                         onPressed: () {
                           // Handle image upload
                         },
@@ -57,32 +58,33 @@ class ProfileManagement extends StatelessWidget {
                   ],
                 ),
               ),
-              SizedBox(height: 24),
+              const SizedBox(height: 24),
               TextFormField(
                 controller: _nameController,
                 decoration: InputDecoration(
-                    labelText: 'Name', suffixIcon: Icon(Icons.edit)),
+                    labelText: 'Name'.tr, suffixIcon: const Icon(Icons.edit)),
               ),
-              SizedBox(height: 16),
+              const SizedBox(height: 16),
               TextFormField(
                 controller: _genderController,
                 decoration: InputDecoration(
-                    labelText: 'Gender', suffixIcon: Icon(Icons.edit)),
+                    labelText: 'Gender'.tr, suffixIcon: const Icon(Icons.edit)),
               ),
-              SizedBox(height: 16),
+              const SizedBox(height: 16),
               TextFormField(
                 controller: _emailController,
                 decoration: InputDecoration(
-                    labelText: 'Email', suffixIcon: Icon(Icons.edit)),
+                    labelText: 'Email'.tr, suffixIcon: const Icon(Icons.edit)),
               ),
-              SizedBox(height: 16),
+              const SizedBox(height: 16),
               TextFormField(
                 controller: _passwordController,
                 obscureText: true,
                 decoration: InputDecoration(
-                    labelText: 'Password', suffixIcon: Icon(Icons.edit)),
+                    labelText: 'Password'.tr,
+                    suffixIcon: const Icon(Icons.edit)),
               ),
-              SizedBox(height: 24),
+              const SizedBox(height: 24),
               Row(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
@@ -94,30 +96,30 @@ class ProfileManagement extends StatelessWidget {
                           // Handle cancel action
                         },
                         child: Text(
-                          'Cancel',
-                          style: TextStyle(color: Colors.white),
+                          'Cancel'.tr,
+                          style: const TextStyle(color: Colors.white),
                         ),
                         style: ButtonStyle(
                           minimumSize: MaterialStateProperty.resolveWith(
-                            (states) => Size(141, 35),
+                            (states) => const Size(141, 35),
                           ),
                           backgroundColor:
                               MaterialStateProperty.all<Color>(Colors.blue),
                         )),
                   ),
-                  SizedBox(width: 37),
+                  const SizedBox(width: 37),
                   ElevatedButton(
                     onPressed: () {
                       Get.toNamed(AppRoutes.home);
                       // Handle save action
                     },
                     child: Text(
-                      'Save',
-                      style: TextStyle(color: Colors.white),
+                      'Save'.tr,
+                      style: const TextStyle(color: Colors.white),
                     ),
                     style: ButtonStyle(
                       minimumSize: MaterialStateProperty.resolveWith(
-                        (states) => Size(141, 35),
+                        (states) => const Size(141, 35),
                       ),
                       backgroundColor:
                           MaterialStateProperty.all<Color>(Colors.blue),

@@ -37,25 +37,25 @@ class LoginPage extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.start,
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
-                          const Text(
-                            'Login',
-                            style: TextStyle(fontSize: 20),
+                          Text(
+                            'Login'.tr,
+                            style: const TextStyle(fontSize: 20),
                           ),
                           TextFormField(
                             controller: controller.emailController,
-                            decoration: const InputDecoration(
-                              contentPadding: EdgeInsets.symmetric(),
-                              prefixIcon: Icon(
+                            decoration: InputDecoration(
+                              contentPadding: const EdgeInsets.symmetric(),
+                              prefixIcon: const Icon(
                                 Icons.email,
                                 color: Colors.black,
                               ),
                               fillColor: AppColors.mintGreen,
                               filled: true,
-                              border: OutlineInputBorder(
+                              border: const OutlineInputBorder(
                                 borderRadius:
                                     BorderRadius.all(Radius.circular(20)),
                               ),
-                              labelText: 'Enter Email',
+                              labelText: 'Enter Email'.tr,
                             ),
                           ),
                           const SizedBox(
@@ -63,19 +63,19 @@ class LoginPage extends StatelessWidget {
                           ),
                           TextFormField(
                             controller: controller.passwordController,
-                            decoration: const InputDecoration(
-                              contentPadding: EdgeInsets.symmetric(),
-                              prefixIcon: Icon(
+                            decoration: InputDecoration(
+                              contentPadding: const EdgeInsets.symmetric(),
+                              prefixIcon: const Icon(
                                 Icons.lock,
                                 color: Colors.black,
                               ),
                               fillColor: AppColors.mintGreen,
                               filled: true,
-                              border: OutlineInputBorder(
+                              border: const OutlineInputBorder(
                                 borderRadius:
                                     BorderRadius.all(Radius.circular(20)),
                               ),
-                              labelText: 'Password',
+                              labelText: 'Password'.tr,
                             ),
                             obscureText: true,
                           ),
@@ -85,11 +85,11 @@ class LoginPage extends StatelessWidget {
                               padding: const EdgeInsets.all(8.0),
                               child: TextButton(
                                 onPressed: () {},
-                                child: const SizedBox(
+                                child: SizedBox(
                                   height: 15,
                                   child: Text(
-                                    'Forgot Password?',
-                                    style: TextStyle(
+                                    'Forgot Password?'.tr,
+                                    style: const TextStyle(
                                       color: Colors.blue,
                                       decoration: TextDecoration.none,
                                     ),
@@ -106,18 +106,19 @@ class LoginPage extends StatelessWidget {
                                 ScaffoldMessenger.of(context).showSnackBar(
                                   SnackBar(
                                     content: Text(
-                                        "Please enter username and password"),
-                                    duration: Duration(seconds: 2),
+                                        "Please enter username and password"
+                                            .tr),
+                                    duration: const Duration(seconds: 2),
                                   ),
                                 );
                               } else {
                                 Get.toNamed(AppRoutes.profilecreation);
                               }
                             },
-                            child: const Text(
-                              "Log In",
-                              style:
-                                  TextStyle(color: Colors.black, fontSize: 20),
+                            child: Text(
+                              "Log In".tr,
+                              style: const TextStyle(
+                                  color: Colors.black, fontSize: 20),
                             ),
                             style: ButtonStyle(
                               minimumSize: MaterialStateProperty.resolveWith(
@@ -130,13 +131,13 @@ class LoginPage extends StatelessWidget {
                           ),
                           Row(
                             children: [
-                              const Align(
+                              Align(
                                 alignment: Alignment.centerRight,
                                 child: Padding(
-                                  padding: EdgeInsets.all(8.0),
+                                  padding: const EdgeInsets.all(8.0),
                                   child: Text(
-                                    "don't have an account?",
-                                    style: TextStyle(
+                                    "don't have an account?".tr,
+                                    style: const TextStyle(
                                       color: Colors.blue,
                                       decoration: TextDecoration.none,
                                     ),
@@ -147,17 +148,17 @@ class LoginPage extends StatelessWidget {
                                 onPressed: () {
                                   Get.toNamed(AppRoutes.signup);
                                 },
-                                child: const Text("Signup"),
+                                child: Text("Signup".tr),
                               ),
                             ],
                           ),
-                          const Text(
-                            "----OR----",
-                            style: TextStyle(fontSize: 20),
+                          Text(
+                            "----OR----".tr,
+                            style: const TextStyle(fontSize: 20),
                           ),
-                          const Align(
+                          Align(
                             alignment: Alignment.centerLeft,
-                            child: Text("Sign Up with"),
+                            child: Text("Sign Up with".tr),
                           ),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.center,

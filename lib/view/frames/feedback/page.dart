@@ -11,7 +11,7 @@ class FeedbackPage extends StatelessWidget {
       backgroundColor: AppColors.creamyYellow,
       appBar: AppBar(
         backgroundColor: AppColors.linearpowderpink,
-        title: Text('Stories Feedback'),
+        title: Text('Stories Feedback'.tr),
       ),
       body: ListView.builder(
         itemCount: feedbackController.feedbackList.length,
@@ -39,7 +39,7 @@ class FeedbackPage extends StatelessWidget {
 
   void _showRatingDialog() {
     Get.defaultDialog(
-      title: 'Rate Stories',
+      title: 'Rate Stories'.tr,
       content: RatingDialog(),
     );
   }
@@ -55,7 +55,7 @@ class RatingDialog extends StatelessWidget {
       children: [
         TextField(
           controller: _storyNameController,
-          decoration: InputDecoration(labelText: 'Story Name'),
+          decoration: InputDecoration(labelText: 'Story Name'.tr),
         ),
         SizedBox(height: 20),
         Obx(() => RatingStars(
@@ -69,7 +69,7 @@ class RatingDialog extends StatelessWidget {
                 _storyNameController.text, _rating.value);
             Get.back();
           },
-          child: Text('Submit'),
+          child: Text('Submit'.tr),
         ),
       ],
     );
