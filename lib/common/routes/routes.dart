@@ -36,9 +36,7 @@ class AppRoutes {
         page: () => const onBoarding2Page(),
         binding: Onboarding2Bindings()),
     GetPage(
-        name: welcome,
-        page: () => const WelcomePage(),
-        binding: WelcomeBindings()),
+        name: welcome, page: () => WelcomePage(), binding: WelcomeBindings()),
     GetPage(
         name: profilecreation,
         page: () => ProfileCreation(),

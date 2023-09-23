@@ -1,5 +1,3 @@
-library splash;
-
 export 'package:get/get.dart';
 export 'package:roudy_story_box/view/frames/onboarding1/page.dart';
 export 'package:roudy_story_box/view/frames/splash/controller.dart';

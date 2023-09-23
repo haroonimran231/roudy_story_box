@@ -1,7 +1,5 @@
 // import 'package:roudy_story_box/view/frames/picture/picture.dart';
 
-import 'package:roudy_story_box/view/frames/storydisplay/story_display.dart';
-
 import 'index.dart';
 
 class MyApp extends StatelessWidget {
@@ -14,7 +12,7 @@ class MyApp extends StatelessWidget {
       getPages: AppRoutes.pages,
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
-     
+
       // theme: ThemeData(
       //   colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       //   useMaterial3: true,
@@ -24,7 +22,7 @@ class MyApp extends StatelessWidget {
       //   highContrastTheme: AppStyles.lightTheme(),
       //   highContrastDarkTheme: AppStyles.darkTheme(),
 
-      home: StoryDisplayPage(),
+      home: OnBoarding1Page(),
       // initialBinding: BindingsBuilder(() {
       //   Get.put(ThemeController());
       // }),

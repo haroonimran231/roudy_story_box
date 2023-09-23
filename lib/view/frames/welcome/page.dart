@@ -1,11 +1,12 @@
+import 'package:roudy_story_box/view/frames/welcome/welome_screen.dart';
+
 import 'index.dart';
 
 class WelcomePage extends StatelessWidget {
   // static var routeName;
-
   // static var routeName;
 
-  const WelcomePage({super.key});
+  WelcomePage({super.key});
 
   @override
   Widget build(BuildContext context) {

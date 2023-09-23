@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "670593407081",
+    "project_id": "roudy-story-box-ebeb9",
+    "storage_bucket": "roudy-story-box-ebeb9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:670593407081:android:7f4b954662f11b4d0e2af8",
+        "android_client_info": {
+          "package_name": "com.haroon.roudy_story_box"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDLbco5y7Hwv5i09MmUkqbY98Td-DFElwQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

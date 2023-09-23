@@ -1,10 +1,28 @@
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:roudy_story_box/utils.dart';
+
 import 'index.dart';
 
 class LoginPage extends StatelessWidget {
   // ... (other code)
-
+  final _auth = FirebaseAuth.instance;
+  final TextEditingController emailController = TextEditingController();
+  final TextEditingController passwordController = TextEditingController();
   // ignore: use_key_in_widget_constructors
-  const LoginPage({super.key});
+  LoginPage({super.key});
+
+  void login() {
+    _auth
+        .signInWithEmailAndPassword(
+            email: emailController.text.toString(),
+            password: passwordController.text.toString())
+        .then((value) {
+      Utills().toastMessage(value.user!.email.toString());
+      Get.toNamed(AppRoutes.profilecreation);
+    }).onError((error, stackTrace) {
+      Utills().toastMessage(error.toString());
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -43,6 +61,7 @@ class LoginPage extends StatelessWidget {
                           ),
                           TextFormField(
                             controller: controller.emailController,
+                            keyboardType: TextInputType.emailAddress,
                             decoration: InputDecoration(
                               contentPadding: const EdgeInsets.symmetric(),
                               prefixIcon: const Icon(
@@ -62,6 +81,7 @@ class LoginPage extends StatelessWidget {
                             height: 7,
                           ),
                           TextFormField(
+                            keyboardType: TextInputType.text,
                             controller: controller.passwordController,
                             decoration: InputDecoration(
                               contentPadding: const EdgeInsets.symmetric(),
@@ -111,9 +131,11 @@ class LoginPage extends StatelessWidget {
                                     duration: const Duration(seconds: 2),
                                   ),
                                 );
-                              } else {
-                                Get.toNamed(AppRoutes.profilecreation);
+                                login();
                               }
+                              // else {
+                              //   Get.toNamed(AppRoutes.profilecreation);
+                              // }
                             },
                             child: Text(
                               "Log In".tr,

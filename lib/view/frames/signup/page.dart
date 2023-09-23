@@ -1,11 +1,14 @@
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:roudy_story_box/utils.dart';
+
 import 'index.dart';
 
 class SignupPage extends StatelessWidget {
   // static var routeName;
-
+  bool loading = false;
   // static var routeName;
-
-  const SignupPage({super.key});
+  FirebaseAuth _auth = FirebaseAuth.instance;
+  SignupPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -64,6 +67,7 @@ class SignupPage extends StatelessWidget {
                           height: 12,
                         ),
                         TextFormField(
+                          keyboardType: TextInputType.emailAddress,
                           controller: controller.emailController,
                           decoration: InputDecoration(
                             contentPadding: EdgeInsets.symmetric(),
@@ -83,6 +87,7 @@ class SignupPage extends StatelessWidget {
                           height: 12,
                         ),
                         TextFormField(
+                          keyboardType: TextInputType.text,
                           controller: controller.passwordController,
                           decoration: InputDecoration(
                               contentPadding: EdgeInsets.symmetric(),
@@ -122,7 +127,36 @@ class SignupPage extends StatelessWidget {
                         ),
                         FilledButton(
                           onPressed: () {
-                            Get.toNamed(AppRoutes.profilecreation);
+                            if (controller.emailController.text.isEmpty ||
+                                controller.passwordController.text.isEmpty) {
+                              // Show an error message when fields are empty
+                              ScaffoldMessenger.of(context).showSnackBar(
+                                SnackBar(
+                                  content: Text(
+                                      "Please enter username and password".tr),
+                                  duration: const Duration(seconds: 2),
+                                ),
+                              );
+                            } else {
+                              Get.toNamed(AppRoutes.login);
+                            }
+                            //       setState(){
+                            // loading = true;
+                            //     }
+
+                            _auth
+                                .createUserWithEmailAndPassword(
+                                  email: controller.emailController.text
+                                      .toString(),
+                                  password: controller.passwordController.text
+                                      .toString(),
+                                )
+                                .then(
+                                  (value) {},
+                                )
+                                .onError((error, stackTrace) {
+                              Utills().toastMessage(error.toString());
+                            });
                           },
                           child: Text(
                             "Create Account".tr,

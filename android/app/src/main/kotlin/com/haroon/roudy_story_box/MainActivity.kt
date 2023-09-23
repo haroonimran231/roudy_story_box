@@ -1,4 +1,4 @@
-package com.example.roudy_story_box
+package com.haroon.roudy_story_box
 
 import io.flutter.embedding.android.FlutterActivity
 
