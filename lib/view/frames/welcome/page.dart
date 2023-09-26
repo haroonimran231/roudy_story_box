@@ -60,19 +60,19 @@ class WelcomePage extends StatelessWidget {
                       },
                       label: Text(
                         'Get Started'.tr,
-                        style: TextStyle(color: AppColors.purple),
+                        style: TextStyle(color: Colors.white),
                       ),
                       icon: Icon(
                         Icons.arrow_forward,
-                        color: AppColors.purple,
+                        color: Colors.white,
                       ),
                       style: ButtonStyle(
                         minimumSize: MaterialStateProperty.resolveWith(
-                          (states) => Size(310, 44),
+                          (states) => Size(180, 45),
                         ),
-                        backgroundColor: MaterialStateProperty.all<Color>(
-                            AppColors
-                                .softblue), // Set the desired background color
+                        // backgroundColor: MaterialStateProperty.all<Color>(
+                        //     AppColors
+                        //         .softblue), // Set the desired background color
                       ),
                     ),
                   ],

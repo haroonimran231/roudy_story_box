@@ -7,4 +7,4 @@ export 'package:roudy_story_box/view/frames/profilemanagement/gender_controller.
 export 'package:roudy_story_box/view/frames/splash/page.dart';
 export 'package:roudy_story_box/common/routes/routes.dart';
 export 'package:roudy_story_box/common/routes/index.dart';
-export 'package:roudy_story_box/view/frames/locale_string.dart';
+export 'package:roudy_story_box/view/frames/language.dart/locale_string.dart';

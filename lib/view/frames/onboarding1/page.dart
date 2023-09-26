@@ -7,27 +7,27 @@ class OnBoarding1Page extends StatelessWidget {
   final List locale = [
     {
       "name": "English(English)                       🇺🇸",
-      "locale": Locale("en", "US")
+      "locale": const Locale("en", "US")
     },
     {
       "name": "Urdu(اردو)                                  🇵🇰",
-      "locale": Locale("ur", "PK")
+      "locale": const Locale("ur", "PK")
     },
     {
       "name": "Hindi(हिंदी)                                 🇮🇳",
-      "locale": Locale("hi", "IN")
+      "locale": const Locale("hi", "IN")
     },
     {
       "name": "Chinese(中文)                           🇨🇳",
-      "locale": Locale("zn", "CN")
+      "locale": const Locale("zh", "CN")
     },
     {
       "name": "French(français)                       🇫🇷",
-      "locale": Locale("fr", "CH")
+      "locale": const Locale("fr", "CH")
     },
     {
       "name": "German(Deutsch)                     🇩🇪",
-      "locale": Locale("de", "CH")
+      "locale": const Locale("de", "CH")
     },
   ];
 
@@ -43,7 +43,7 @@ class OnBoarding1Page extends StatelessWidget {
         context: context,
         builder: (builder) {
           return AlertDialog(
-              title: Text("Choose a language"),
+              title: const Text("Choose a language"),
               content: Container(
                   width: double.maxFinite,
                   child: ListView.separated(
@@ -60,7 +60,7 @@ class OnBoarding1Page extends StatelessWidget {
                         );
                       },
                       separatorBuilder: (context, index) {
-                        return Divider(
+                        return const Divider(
                           color: Colors.amber,
                         );
                       },
@@ -84,7 +84,7 @@ class OnBoarding1Page extends StatelessWidget {
                 fit: BoxFit.fill,
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
             FilledButton(
@@ -93,13 +93,20 @@ class OnBoarding1Page extends StatelessWidget {
                 },
                 child: Text(
                   "Next".tr,
-                  style: TextStyle(fontSize: 20.5, fontWeight: FontWeight.bold),
+                  style: const TextStyle(
+                      fontSize: 20.5, fontWeight: FontWeight.bold),
                 ),
                 style: ButtonStyle(
                   minimumSize: MaterialStateProperty.resolveWith(
-                      (states) => Size(300, 71)),
+                      (states) => const Size(180, 45)),
                 )),
-            ElevatedButton(
+            FilledButton(
+                style: ButtonStyle(
+                  // backgroundColor: MaterialStateColor.resolveWith(
+                  //     (states) => AppColors.softblue),
+                  minimumSize: MaterialStateProperty.resolveWith(
+                      (states) => const Size(180, 45)),
+                ),
                 onPressed: () {
                   builddialog(context);
                 },

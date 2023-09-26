@@ -90,19 +90,19 @@ class ProfileCreation extends StatelessWidget {
                     },
                     label: Text(
                       'Next'.tr,
-                      style: TextStyle(color: AppColors.purple),
+                      style: TextStyle(color: Colors.white),
                     ),
                     icon: Icon(
                       Icons.arrow_forward,
-                      color: AppColors.purple,
+                      color: Colors.white,
                     ),
                     style: ButtonStyle(
                       minimumSize: MaterialStateProperty.resolveWith(
-                        (states) => Size(310, 44),
+                        (states) => Size(140, 35),
                       ),
-                      backgroundColor: MaterialStateProperty.all<Color>(
-                        AppColors.softblue,
-                      ),
+                      // backgroundColor: MaterialStateProperty.all<Color>(
+                      //   AppColors.softblue,
+                      // ),
                     ),
                   ),
                 ],

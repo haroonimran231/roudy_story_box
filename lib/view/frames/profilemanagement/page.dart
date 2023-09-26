@@ -91,7 +91,7 @@ class ProfileManagement extends StatelessWidget {
                   SizedBox(
                     width: 141,
                     height: 35,
-                    child: ElevatedButton(
+                    child: FilledButton(
                         onPressed: () {
                           // Handle cancel action
                         },
@@ -103,26 +103,26 @@ class ProfileManagement extends StatelessWidget {
                           minimumSize: MaterialStateProperty.resolveWith(
                             (states) => const Size(141, 35),
                           ),
-                          backgroundColor:
-                              MaterialStateProperty.all<Color>(Colors.blue),
+                          // backgroundColor:
+                          //     MaterialStateProperty.all<Color>(Colors.blue),
                         )),
                   ),
                   const SizedBox(width: 37),
-                  ElevatedButton(
+                  FilledButton(
                     onPressed: () {
                       Get.toNamed(AppRoutes.home);
                       // Handle save action
                     },
-                    child: Text(
-                      'Save'.tr,
-                      style: const TextStyle(color: Colors.white),
-                    ),
                     style: ButtonStyle(
                       minimumSize: MaterialStateProperty.resolveWith(
                         (states) => const Size(141, 35),
                       ),
-                      backgroundColor:
-                          MaterialStateProperty.all<Color>(Colors.blue),
+                      // backgroundColor:
+                      //     MaterialStateProperty.all<Color>(Colors.blue),
+                    ),
+                    child: Text(
+                      'Save'.tr,
+                      style: const TextStyle(color: Colors.white),
                     ),
                   ),
                 ],

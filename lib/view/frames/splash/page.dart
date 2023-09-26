@@ -14,14 +14,18 @@ class SplashPage extends StatelessWidget {
     return Scaffold(
       // backgroundColor: powderPink,
 
-      body: Container(
-        child: Image.asset(
-          "assets/images/Splash.png",
-          height: 850,
-          width: 390,
-          fit: BoxFit.cover,
-        ),
-      ),
+      body: GetBuilder<SplashController>(
+          init: SplashController(),
+          builder: (context) {
+            return Container(
+              child: Image.asset(
+                "assets/images/Splash.png",
+                height: 850,
+                width: 390,
+                fit: BoxFit.cover,
+              ),
+            );
+          }),
     );
   }
 }

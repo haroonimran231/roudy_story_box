@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
+
+import 'package:roudy_story_box/run_app/index.dart';
 // import 'package:flutter_tts/flutter_tts.dart';
 
 class StoryDisplayPage extends StatefulWidget {
@@ -199,21 +201,18 @@ class _StoryDisplayPageState extends State<StoryDisplayPage> {
               Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  // Row(
-                  //   children: [
-                  //     IconButton(
-                  //       icon: Icon(Icons.arrow_back),
-                  //       onPressed: () {
-                  // Navigator.push(
-                  //   context,
-                  //   MaterialPageRoute(
-                  //     builder: (context) => DashboardPage(),
-                  //   ),
-                  // );
-                  //       },
-                  //     ),
-                  //   ],
-                  // ),
+                  SafeArea(
+                    child: Row(
+                      children: [
+                        IconButton(
+                          icon: Icon(Icons.arrow_back),
+                          onPressed: () {
+                            Get.toNamed(AppRoutes.home);
+                          },
+                        ),
+                      ],
+                    ),
+                  ),
                   Padding(
                     padding: const EdgeInsets.all(14.0),
                     child: TextField(

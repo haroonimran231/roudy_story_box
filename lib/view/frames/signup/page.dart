@@ -1,14 +1,11 @@
-import 'package:firebase_auth/firebase_auth.dart';
-import 'package:roudy_story_box/utils.dart';
-
 import 'index.dart';
 
 class SignupPage extends StatelessWidget {
   // static var routeName;
-  bool loading = false;
+  // bool loading = false;
   // static var routeName;
-  FirebaseAuth _auth = FirebaseAuth.instance;
-  SignupPage({super.key});
+  // FirebaseAuth _auth = FirebaseAuth.instance;
+  const SignupPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -19,13 +16,11 @@ class SignupPage extends StatelessWidget {
           return Center(
             child: Column(
               children: [
-                Container(
-                  child: Image.asset(
-                    "assets/images/login.png",
-                    height: 350,
-                    width: 390,
-                    fit: BoxFit.cover,
-                  ),
+                Image.asset(
+                  "assets/images/login.png",
+                  height: 350,
+                  width: 390,
+                  fit: BoxFit.cover,
                 ),
                 Expanded(
                   child: Container(
@@ -39,165 +34,180 @@ class SignupPage extends StatelessWidget {
                         topRight: Radius.circular(20),
                       ),
                     ),
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        Text(
-                          'Sign Up'.tr,
-                          style: TextStyle(fontSize: 20),
-                        ),
-                        TextFormField(
-                          controller: controller.nameController,
-                          decoration: InputDecoration(
-                            contentPadding: EdgeInsets.symmetric(),
-                            prefixIcon: Icon(
-                              Icons.man_rounded,
-                              color: Colors.black,
-                            ),
-                            fillColor: AppColors.mintGreen,
-                            filled: true,
-                            border: OutlineInputBorder(
-                                borderRadius:
-                                    BorderRadius.all(Radius.circular(20))),
-                            labelText: 'Enter Name'.tr,
+                    child: SingleChildScrollView(
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          Text(
+                            'Sign Up'.tr,
+                            style: const TextStyle(fontSize: 20),
                           ),
-                        ),
-                        SizedBox(
-                          height: 12,
-                        ),
-                        TextFormField(
-                          keyboardType: TextInputType.emailAddress,
-                          controller: controller.emailController,
-                          decoration: InputDecoration(
-                            contentPadding: EdgeInsets.symmetric(),
-                            prefixIcon: Icon(
-                              Icons.email,
-                              color: Colors.black,
-                            ),
-                            fillColor: AppColors.mintGreen,
-                            filled: true,
-                            border: OutlineInputBorder(
-                                borderRadius:
-                                    BorderRadius.all(Radius.circular(20))),
-                            labelText: 'Enter Email'.tr,
-                          ),
-                        ),
-                        SizedBox(
-                          height: 12,
-                        ),
-                        TextFormField(
-                          keyboardType: TextInputType.text,
-                          controller: controller.passwordController,
-                          decoration: InputDecoration(
-                              contentPadding: EdgeInsets.symmetric(),
-                              prefixIcon: Icon(
-                                Icons.lock,
+                          TextFormField(
+                            controller: controller.nameController,
+                            decoration: InputDecoration(
+                              contentPadding: const EdgeInsets.symmetric(),
+                              prefixIcon: const Icon(
+                                Icons.man_rounded,
                                 color: Colors.black,
                               ),
                               fillColor: AppColors.mintGreen,
                               filled: true,
-                              border: OutlineInputBorder(
+                              border: const OutlineInputBorder(
                                   borderRadius:
                                       BorderRadius.all(Radius.circular(20))),
-                              labelText: 'Password'.tr),
-                          obscureText: true,
-                        ),
-                        SizedBox(
-                          height: 12,
-                        ),
-                        TextFormField(
-                          controller: controller.confirmPasswordController,
-                          decoration: InputDecoration(
-                              contentPadding: EdgeInsets.symmetric(),
-                              prefixIcon: Icon(
-                                Icons.lock,
+                              labelText: 'Enter Name'.tr,
+                            ),
+                          ),
+                          const SizedBox(
+                            height: 12,
+                          ),
+                          TextFormField(
+                            keyboardType: TextInputType.emailAddress,
+                            controller: controller.emailController,
+                            decoration: InputDecoration(
+                              contentPadding: const EdgeInsets.symmetric(),
+                              prefixIcon: const Icon(
+                                Icons.email,
                                 color: Colors.black,
                               ),
                               fillColor: AppColors.mintGreen,
                               filled: true,
-                              border: OutlineInputBorder(
+                              border: const OutlineInputBorder(
                                   borderRadius:
                                       BorderRadius.all(Radius.circular(20))),
-                              labelText: 'Confirm Password'.tr),
-                          obscureText: true,
-                        ),
-                        SizedBox(
-                          height: 15,
-                        ),
-                        FilledButton(
-                          onPressed: () {
-                            if (controller.emailController.text.isEmpty ||
-                                controller.passwordController.text.isEmpty) {
-                              // Show an error message when fields are empty
-                              ScaffoldMessenger.of(context).showSnackBar(
-                                SnackBar(
-                                  content: Text(
-                                      "Please enter username and password".tr),
-                                  duration: const Duration(seconds: 2),
+                              labelText: 'Enter Email'.tr,
+                            ),
+                          ),
+                          const SizedBox(
+                            height: 12,
+                          ),
+                          TextFormField(
+                            keyboardType: TextInputType.text,
+                            controller: controller.passwordController,
+                            decoration: InputDecoration(
+                                contentPadding: const EdgeInsets.symmetric(),
+                                prefixIcon: const Icon(
+                                  Icons.lock,
+                                  color: Colors.black,
                                 ),
-                              );
-                            } else {
-                              Get.toNamed(AppRoutes.login);
-                            }
-                            //       setState(){
-                            // loading = true;
-                            //     }
+                                fillColor: AppColors.mintGreen,
+                                filled: true,
+                                border: const OutlineInputBorder(
+                                    borderRadius:
+                                        BorderRadius.all(Radius.circular(20))),
+                                labelText: 'Password'.tr),
+                            obscureText: true,
+                          ),
+                          const SizedBox(
+                            height: 12,
+                          ),
+                          TextFormField(
+                            controller: controller.confirmPasswordController,
+                            decoration: InputDecoration(
+                                contentPadding: const EdgeInsets.symmetric(),
+                                prefixIcon: const Icon(
+                                  Icons.lock,
+                                  color: Colors.black,
+                                ),
+                                fillColor: AppColors.mintGreen,
+                                filled: true,
+                                border: const OutlineInputBorder(
+                                    borderRadius:
+                                        BorderRadius.all(Radius.circular(20))),
+                                labelText: 'Confirm Password'.tr),
+                            obscureText: true,
+                          ),
+                          const SizedBox(
+                            height: 15,
+                          ),
+                          FilledButton(
+                            onPressed: () async {
+                              AuthController.instance.register(
+                                  controller.emailController.text.trim(),
+                                  controller.passwordController.text.trim());
+                              CollectionReference ref =
+                                  FirebaseFirestore.instance.collection('user');
 
-                            _auth
-                                .createUserWithEmailAndPassword(
-                                  email: controller.emailController.text
-                                      .toString(),
-                                  password: controller.passwordController.text
-                                      .toString(),
-                                )
-                                .then(
-                                  (value) {},
-                                )
-                                .onError((error, stackTrace) {
-                              Utills().toastMessage(error.toString());
-                            });
-                          },
-                          child: Text(
-                            "Create Account".tr,
-                            style: TextStyle(color: Colors.black, fontSize: 20),
-                          ),
-                          style: ButtonStyle(
-                            minimumSize: MaterialStateProperty.resolveWith(
-                              (states) => Size(175, 35),
+                              String docId = ref.doc().id;
+
+                              await ref.doc(docId).set({
+                                'name': controller.nameController.text,
+                                'id': docId,
+                                'email': controller.emailController.text,
+                                'password': controller.passwordController.text
+                              });
+
+                              // if (controller.emailController.text.isEmpty ||
+                              //     controller.passwordController.text.isEmpty) {
+                              //   // Show an error message when fields are empty
+                              //   ScaffoldMessenger.of(context).showSnackBar(
+                              //     SnackBar(
+                              //       content: Text(
+                              //           "Please enter username and password".tr),
+                              //       duration: const Duration(seconds: 2),
+                              //     ),
+                              //   );
+                              // } else {
+                              //   Get.toNamed(AppRoutes.login);
+                              // }
+
+                              // _auth
+                              //     .createUserWithEmailAndPassword(
+                              //       email: controller.emailController.text
+                              //           .toString(),
+                              //       password: controller.passwordController.text
+                              //           .toString(),
+                              //     )
+                              //     .then(
+                              //       (value) {},
+                              //     )
+                              //     .onError((error, stackTrace) {
+                              //   Utills().toastMessage(error.toString());
+                              // });
+                            },
+                            child: Text(
+                              "Create Account".tr,
+                              style: const TextStyle(
+                                  color: Colors.white, fontSize: 20),
                             ),
-                            backgroundColor: MaterialStateProperty.all<Color>(
-                                AppColors
-                                    .mintGreen), // Set the desired background color
+                            style: ButtonStyle(
+                              minimumSize: MaterialStateProperty.resolveWith(
+                                (states) => const Size(135, 35),
+                              ),
+                              // backgroundColor: MaterialStateProperty.all<Color>(
+                              //     AppColors
+                              //         .mintGreen), // Set the desired background color
+                            ),
                           ),
-                        ),
-                        SizedBox(
-                          height: 15,
-                        ),
-                        Row(
-                          children: [
-                            Align(
-                              alignment: Alignment.centerRight,
-                              child: Padding(
-                                padding: const EdgeInsets.all(8.0),
-                                child: Text(
-                                  "                      do you have an already account?"
-                                      .tr,
-                                  style: TextStyle(
-                                    color: Colors.blue,
-                                    decoration: TextDecoration.none,
+                          const SizedBox(
+                            height: 15,
+                          ),
+                          Row(
+                            children: [
+                              Align(
+                                alignment: Alignment.centerRight,
+                                child: Padding(
+                                  padding: const EdgeInsets.all(8.0),
+                                  child: Text(
+                                    "                      do you have an already account?"
+                                        .tr,
+                                    style: const TextStyle(
+                                      color: Colors.blue,
+                                      decoration: TextDecoration.none,
+                                    ),
                                   ),
                                 ),
                               ),
-                            ),
-                            TextButton(
-                                onPressed: () {
-                                  Get.toNamed(AppRoutes.login);
-                                },
-                                child: Text("Login".tr))
-                          ],
-                        ),
-                      ],
+                              TextButton(
+                                  onPressed: () {
+                                    Get.toNamed(AppRoutes.login);
+                                  },
+                                  child: Text("Login".tr))
+                            ],
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                 )

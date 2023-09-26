@@ -22,7 +22,7 @@ class MyApp extends StatelessWidget {
       //   highContrastTheme: AppStyles.lightTheme(),
       //   highContrastDarkTheme: AppStyles.darkTheme(),
 
-      home: OnBoarding1Page(),
+      home: SplashPage(),
       // initialBinding: BindingsBuilder(() {
       //   Get.put(ThemeController());
       // }),

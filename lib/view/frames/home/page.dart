@@ -1,23 +1,9 @@
 // import 'index.dart';
-import 'package:get/get.dart';
-import 'package:flutter/material.dart';
-import 'package:roudy_story_box/common/color/color.dart';
-import 'package:roudy_story_box/common/routes/routes.dart';
-import 'package:roudy_story_box/view/frames/profilemanagement/page.dart';
+import 'index.dart';
 
 // ignore: must_be_immutable
 class HomePage extends StatelessWidget {
   final TextEditingController _searchController = TextEditingController();
-  // bool _iconBool = false;
-
-  // IconData _iconLight = Icons.wb_sunny;
-  // IconData _iconDark = Icons.nights_stay;
-
-  // // ignore: unused_field
-  // ThemeData _darkTheme = ThemeData(
-  //   primarySwatch: Colors.blue,
-  //   brightness: Brightness.light,
-  // );
   HomePage({super.key});
   Widget buildDrawer(BuildContext context) {
     return Drawer(
@@ -82,6 +68,15 @@ class HomePage extends StatelessWidget {
               // Add onTap logic
             },
           ),
+          ListTile(
+            leading: const Icon(Icons.logout),
+            title: Text('Sign out'),
+            onTap: () {
+              // AuthController.instance.logOut();
+              Get.toNamed(AppRoutes.login);
+              // Add onTap logic
+            },
+          ),
 
           // ListTile(
           //   leading: const Icon(Icons.notifications),
@@ -105,7 +100,7 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: AppColors.powderPink,
+        backgroundColor: AppColors.softblue,
         title: Container(
           child: Row(
             children: [
@@ -168,7 +163,7 @@ class HomePage extends StatelessWidget {
             height: 23,
           ),
           Container(
-            height: 449,
+            height: 480,
             width: 393,
             // decoration: BoxDecoration(),
             color: const Color(0xffABB3BB),
@@ -191,21 +186,21 @@ class HomePage extends StatelessWidget {
                       child: Image.asset("assets/images/home2.png")),
                 ),
                 const SizedBox(
-                  height: 79.94,
+                  height: 10.94,
                 ),
                 Center(
-                  child: ElevatedButton(
+                  child: FilledButton(
                     onPressed: () {},
                     child: Text(
                       "Save".tr,
-                      style: TextStyle(fontSize: 32),
+                      style: TextStyle(fontSize: 26),
                     ),
                     style: ButtonStyle(
                       minimumSize: MaterialStateProperty.resolveWith(
-                        (states) => const Size(205, 58),
+                        (states) => const Size(160, 60),
                       ),
-                      backgroundColor: MaterialStateProperty.all<Color>(
-                          AppColors.powderPink),
+                      // backgroundColor: MaterialStateProperty.all<Color>(
+                      //     AppColors.powderPink),
                     ),
                   ),
                 )

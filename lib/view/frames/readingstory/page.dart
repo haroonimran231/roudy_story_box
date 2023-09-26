@@ -5,16 +5,16 @@ class ReadingStory extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: AppColors.creamyYellow,
-      appBar: AppBar(
+    return SafeArea(
+      child: Scaffold(
         backgroundColor: AppColors.creamyYellow,
-        title: Text("Read Story".tr),
-      ),
-      body: Center(
-        child: Column(
+        appBar: AppBar(
+          backgroundColor: AppColors.softblue,
+          title: Text("Read Story".tr),
+        ),
+        body: Column(
           children: [
-            Container(
+            SizedBox(
               width: 400,
               height: 650,
               child: Image.asset(
@@ -24,17 +24,15 @@ class ReadingStory extends StatelessWidget {
               ),
             ),
             Expanded(
-              child: Container(
-                child: Column(
-                  children: [
-                    FilledButton(
-                      onPressed: () {
-                        Get.toNamed(AppRoutes.storydisplaypage);
-                      },
-                      child: Text("Try Free Trial 7 Days".tr),
-                    )
-                  ],
-                ),
+              child: Column(
+                children: [
+                  FilledButton(
+                    onPressed: () {
+                      Get.toNamed(AppRoutes.storydisplaypage);
+                    },
+                    child: Text("Try Free Trial 7 Days".tr),
+                  )
+                ],
               ),
             )
           ],

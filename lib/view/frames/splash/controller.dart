@@ -24,9 +24,9 @@
 import 'index.dart';
 
 class SplashController extends GetxController {
-  move() {
+  move() async {
     try {
-      Future.delayed(const Duration(seconds: 3));
+      await Future.delayed(const Duration(seconds: 3));
       Get.toNamed(AppRoutes.onboarding1);
     } catch (e) {
       // Handle any navigation errors here.

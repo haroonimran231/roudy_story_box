@@ -23,17 +23,18 @@ class onBoarding2Page extends StatelessWidget {
               height: 20,
             ),
             FilledButton(
-                onPressed: () {
-                  Get.toNamed(AppRoutes.welcome);
-                },
-                child: Text(
-                  "Discover Now".tr,
-                  style: TextStyle(fontSize: 20.5, fontWeight: FontWeight.bold),
-                ),
-                style: ButtonStyle(
-                  minimumSize: MaterialStateProperty.resolveWith(
-                      (states) => Size(300, 71)),
-                )),
+              onPressed: () {
+                Get.toNamed(AppRoutes.welcome);
+              },
+              child: Text(
+                "Discover Now".tr,
+                style: TextStyle(fontSize: 20.5, fontWeight: FontWeight.bold),
+              ),
+              style: ButtonStyle(
+                minimumSize: MaterialStateProperty.resolveWith(
+                    (states) => Size(190, 50)),
+              ),
+            ),
           ],
         ),
       ),

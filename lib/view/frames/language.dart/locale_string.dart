@@ -73,7 +73,7 @@ class LocalString extends Translations {
           'Read Story': 'Read Story',
           "Try Free Trial 7 Days": "Try Free Trial 7 Days",
         },
-        'zh-CN': {
+        'zh_CN': {
           'Next': '下一个',
           'Discover Now': '立即探索',
           "Language": "语言",
