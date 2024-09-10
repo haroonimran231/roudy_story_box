@@ -5,30 +5,12 @@ import 'index.dart';
 
 class OnBoarding1Page extends StatelessWidget {
   final List locale = [
-    {
-      "name": "English(English)                       🇺🇸",
-      "locale": const Locale("en", "US")
-    },
-    {
-      "name": "Urdu(اردو)                                  🇵🇰",
-      "locale": const Locale("ur", "PK")
-    },
-    {
-      "name": "Hindi(हिंदी)                                 🇮🇳",
-      "locale": const Locale("hi", "IN")
-    },
-    {
-      "name": "Chinese(中文)                           🇨🇳",
-      "locale": const Locale("zh", "CN")
-    },
-    {
-      "name": "French(français)                       🇫🇷",
-      "locale": const Locale("fr", "CH")
-    },
-    {
-      "name": "German(Deutsch)                     🇩🇪",
-      "locale": const Locale("de", "CH")
-    },
+    {"name": "English(English)                       🇺🇸", "locale": const Locale("en", "US")},
+    {"name": "Urdu(اردو)                                  🇵🇰", "locale": const Locale("ur", "PK")},
+    {"name": "Hindi(हिंदी)                                 🇮🇳", "locale": const Locale("hi", "IN")},
+    {"name": "Chinese(中文)                           🇨🇳", "locale": const Locale("zh", "CN")},
+    {"name": "French(français)                       🇫🇷", "locale": const Locale("fr", "CH")},
+    {"name": "German(Deutsch)                     🇩🇪", "locale": const Locale("de", "CH")},
   ];
 
   OnBoarding1Page({super.key});
@@ -79,7 +61,7 @@ class OnBoarding1Page extends StatelessWidget {
             Container(
               child: Image.asset(
                 "assets/images/onboarding1.png",
-                height: 660,
+                height: MediaQuery.of(context).size.height * 0.8,
                 width: 395,
                 fit: BoxFit.fill,
               ),
@@ -93,19 +75,16 @@ class OnBoarding1Page extends StatelessWidget {
                 },
                 child: Text(
                   "Next".tr,
-                  style: const TextStyle(
-                      fontSize: 20.5, fontWeight: FontWeight.bold),
+                  style: const TextStyle(fontSize: 20.5, fontWeight: FontWeight.bold),
                 ),
                 style: ButtonStyle(
-                  minimumSize: MaterialStateProperty.resolveWith(
-                      (states) => const Size(180, 45)),
+                  minimumSize: MaterialStateProperty.resolveWith((states) => const Size(180, 45)),
                 )),
             FilledButton(
                 style: ButtonStyle(
                   // backgroundColor: MaterialStateColor.resolveWith(
                   //     (states) => AppColors.softblue),
-                  minimumSize: MaterialStateProperty.resolveWith(
-                      (states) => const Size(180, 45)),
+                  minimumSize: MaterialStateProperty.resolveWith((states) => const Size(180, 45)),
                 ),
                 onPressed: () {
                   builddialog(context);

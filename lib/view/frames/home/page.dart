@@ -153,8 +153,7 @@ class HomePage extends StatelessWidget {
                   contentPadding: const EdgeInsets.all(8.0),
                   labelText: '   Search for anything'.tr,
                   labelStyle: const TextStyle(color: Colors.black),
-                  border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(20.0)),
+                  border: OutlineInputBorder(borderRadius: BorderRadius.circular(20.0)),
                 ),
               ),
             ),
@@ -163,7 +162,7 @@ class HomePage extends StatelessWidget {
             height: 23,
           ),
           Container(
-            height: 480,
+            height: MediaQuery.of(context).size.height * 0.5,
             width: 393,
             // decoration: BoxDecoration(),
             color: const Color(0xffABB3BB),
